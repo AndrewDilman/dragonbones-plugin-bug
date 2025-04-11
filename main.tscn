@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkxl465pjxiq6"]
+
+[ext_resource type="Texture2D" uid="uid://cs5kv66ayjocq" path="res://icon.png" id="1_ogygq"]
+[ext_resource type="PackedScene" uid="uid://c1cyo201m5048" path="res://character_body_2d.tscn" id="2_3ukj3"]
+[ext_resource type="DragonBonesFactory" uid="uid://cswy4t3ejn2lu" path="res://dragonbones_demo/assets/Dragon_ske.dbfactory" id="3_0xvml"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(45, 55)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(415, 41)
+texture = ExtResource("1_ogygq")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_3ukj3")]
+position = Vector2(223, 267)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-2, -3)
+
+[node name="DragonBonesArmatureView" type="DragonBonesArmatureView" parent="."]
+factory = ExtResource("3_0xvml")
+armature_settings = {
+"current_animation": "walk",
+"sub_armatures": {}
+}
+position = Vector2(573, 263)
+scale = Vector2(0.5, 0.5)
