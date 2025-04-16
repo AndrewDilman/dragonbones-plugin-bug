@@ -13,3 +13,4 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+addons/godot_dragon_bones.daylily-zeleen/bin/~libgddragonbones.windows.template_debug.x86_64.dll
