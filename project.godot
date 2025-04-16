@@ -14,7 +14,7 @@ auto_generate_dbfactory=true
 
 [application]
 
-config/name="Moving-animation-bug"
+config/name="DragonBones-plugin-bug"
 run/main_scene="res://dragonbones_demo/demo.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
