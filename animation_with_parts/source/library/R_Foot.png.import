@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ejf2uafp6rki"
-path="res://.godot/imported/EBAKA_backup_tex_0.png-41b0f3aad3296fccabcc937965edb9aa.ctex"
+uid="uid://b8y6t4vj1nfo7"
+path="res://.godot/imported/R_Foot.png-2f97e1a822b938b88f70d7d9905cd206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animation_with_parts/EBAKA_backup_tex_0.png"
-dest_files=["res://.godot/imported/EBAKA_backup_tex_0.png-41b0f3aad3296fccabcc937965edb9aa.ctex"]
+source_file="res://animation_with_parts/source/library/R_Foot.png"
+dest_files=["res://.godot/imported/R_Foot.png-2f97e1a822b938b88f70d7d9905cd206.ctex"]
 
 [params]
 

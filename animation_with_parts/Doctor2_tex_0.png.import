@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fdi4meo0foah"
-path="res://.godot/imported/EBAKA_backup_tex_1.png-b1f6d8b35ad8a52d55240ab4631c41b8.ctex"
+uid="uid://cj52200frmboq"
+path="res://.godot/imported/Doctor2_tex_0.png-d903e302a1b4b2c6131041cc0f350bba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animation_with_parts/EBAKA_backup_tex_1.png"
-dest_files=["res://.godot/imported/EBAKA_backup_tex_1.png-b1f6d8b35ad8a52d55240ab4631c41b8.ctex"]
+source_file="res://animation_with_parts/Doctor2_tex_0.png"
+dest_files=["res://.godot/imported/Doctor2_tex_0.png-d903e302a1b4b2c6131041cc0f350bba.ctex"]
 
 [params]
 
