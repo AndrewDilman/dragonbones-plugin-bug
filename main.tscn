@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1cyo201m5048" path="res://character_body_2d.tscn" id="2_3ukj3"]
 
-[sub_resource type="DragonBonesFactory" id="DragonBonesFactory_h0usw"]
+[sub_resource type="DragonBonesFactory" id="DragonBonesFactory_kpbf8"]
 dragon_bones_ske_file_list = PackedStringArray("res://animation_with_parts/EBAKA_backup_ske.json")
 texture_atlas_json_file_list = PackedStringArray("res://animation_with_parts/EBAKA_backup_tex_0.json", "res://animation_with_parts/EBAKA_backup_tex_1.json")
 
@@ -15,9 +15,10 @@ position = Vector2(393, 328)
 position = Vector2(-2, -3)
 
 [node name="DragonBonesArmatureView" type="DragonBonesArmatureView" parent="."]
-factory = SubResource("DragonBonesFactory_h0usw")
+factory = SubResource("DragonBonesFactory_kpbf8")
+active = false
 armature_settings = {
-"current_animation": "[none]",
+"current_animation": "Run",
 "sub_armatures": {}
 }
 position = Vector2(523, 322)

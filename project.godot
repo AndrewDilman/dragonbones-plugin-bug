@@ -15,7 +15,7 @@ auto_generate_dbfactory=true
 [application]
 
 config/name="DragonBones-plugin-bug"
-run/main_scene="res://dragonbones_demo/demo.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [editor_plugins]
