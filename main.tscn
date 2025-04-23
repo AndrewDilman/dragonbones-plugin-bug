@@ -1,12 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkxl465pjxiq6"]
+[gd_scene load_steps=7 format=3 uid="uid://bkxl465pjxiq6"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_cddii"]
 [ext_resource type="PackedScene" uid="uid://c1cyo201m5048" path="res://character_body_2d.tscn" id="2_3ukj3"]
 
 [sub_resource type="DragonBonesFactory" id="DragonBonesFactory_r3y8n"]
 dragon_bones_ske_file_list = PackedStringArray("res://animation_with_parts/Doctor2_ske.json")
 texture_atlas_json_file_list = PackedStringArray("res://animation_with_parts/Doctor2_tex_0.json", "res://animation_with_parts/Doctor2_tex_1.json", "res://animation_with_parts/Doctor2_tex_2.json", "res://animation_with_parts/Doctor2_tex_3.json", "res://animation_with_parts/Doctor2_tex_4.json", "res://animation_with_parts/Doctor2_tex_5.json", "res://animation_with_parts/Doctor2_tex_6.json", "res://animation_with_parts/Doctor2_tex_7.json", "res://animation_with_parts/Doctor2_tex_8.json")
 
+[sub_resource type="Animation" id="Animation_8cvy0"]
+resource_name = "Default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_cp2su"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwa6x"]
+_data = {
+"Default": SubResource("Animation_8cvy0"),
+"RESET": SubResource("Animation_cp2su")
+}
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_cddii")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_3ukj3")]
 position = Vector2(393, 328)
@@ -16,8 +54,14 @@ position = Vector2(-2, -3)
 
 [node name="DragonBonesArmatureView" type="DragonBonesArmatureView" parent="."]
 factory = SubResource("DragonBonesFactory_r3y8n")
+active = false
 armature_settings = {
-"current_animation": "Idle",
+"current_animation": "Walk",
 "sub_armatures": {}
 }
 position = Vector2(523, 322)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DragonBonesArmatureView"]
+libraries = {
+"": SubResource("AnimationLibrary_cwa6x")
+}
